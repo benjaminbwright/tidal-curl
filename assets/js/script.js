@@ -13,8 +13,6 @@ function findBeaches(search) {
   console.log(`Searching for ${search}`);
 }
 
-getAllNOAADATA();
-
 function getAllNOAADATA(stationId = '1612340') {
   // link to data response descriptions
   // https://api.tidesandcurrents.noaa.gov/api/prod/responseHelp.html
@@ -87,3 +85,6 @@ loadPinnedBeaches();
 // load initial beach
 populateBeachData({ name: 'Bondi Beach' });
 // default or last searched
+
+// test call to console.log noaa fetches
+getAllNOAADATA();
