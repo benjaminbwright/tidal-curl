@@ -1,8 +1,15 @@
 // DEPENDENCIES (DOM Elements)
 // DATA / STATE / GLOBAL VARIABLES
 // FUNCTIONS
+function getSPF(uv) {
+  if (uv > 2 && uv < 6) return 30;
+  if (uv > 5 && uv < 8) return 50;
+  if (uv > 7 && uv < 11) return 80;
+  return 15;
+}
+
 function loadPinnedBeaches() {
-  console.log('loading pinned beaches');
+  console.log("loading pinned beaches");
 }
 
 function populateBeachData(beach) {
@@ -13,14 +20,22 @@ function findBeaches(search) {
   console.log(`Searching for ${search}`);
 }
 
-function getAllNOAAData(stationId = '1612340') {
+function getAllNOAAData(stationId = "1612340") {
   // link to data response descriptions
   // https://api.tidesandcurrents.noaa.gov/api/prod/responseHelp.html
+<<<<<<< HEAD
+  getNOAAData(stationId, "tide", console.log);
+  getNOAAData(stationId, "wind", console.log);
+}
+
+function getNOAAData(stationId = "1612340", type, callback) {
+=======
   getNOAAData(stationId, 'tide');
   getNOAAData(stationId, 'wind');
 }
 
 function getNOAAData(stationId = '1612340', type, callback = console.log) {
+>>>>>>> ce36dd92f6e653faeb166eb8a711f759f779f9f1
   // https://api.tidesandcurrents.noaa.gov/api/prod/#requestResponse
 
   // tide data example
@@ -29,27 +44,31 @@ function getNOAAData(stationId = '1612340', type, callback = console.log) {
   // wind data example
   // https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?begin_date=20210601&end_date=20210630&station=8724580&product=wind&time_zone=lst_ldt&interval=h&units=english&application=DataAPI_Sample&format=csv
 
-  var product = '';
-  var datum = '';
-  if (type === 'tide') {
-    product = 'predictions';
-    datum = 'MTL';
-  } else if (type === 'wind') {
-    product = 'wind';
+  var product = "";
+  var datum = "";
+  if (type === "tide") {
+    product = "predictions";
+    datum = "MTL";
+  } else if (type === "wind") {
+    product = "wind";
   }
 
+<<<<<<< HEAD
+  var baseURL = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?";
+=======
   var baseURL = 'https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?';
 
+>>>>>>> ce36dd92f6e653faeb166eb8a711f759f779f9f1
   var paramsObject = {
-    date: 'today',
+    date: "today",
     station: stationId,
     product, // same as product: product
-    datum: 'MTL',
-    time_zone: 'lst_ldt',
-    interval: 'hilo',
-    units: 'english',
-    application: 'DataAPI_Sample',
-    format: 'json',
+    datum: "MTL",
+    time_zone: "lst_ldt",
+    interval: "hilo",
+    units: "english",
+    application: "DataAPI_Sample",
+    format: "json",
   };
 
   var requestURL = baseURL;
@@ -106,7 +125,7 @@ function handlePinClick() {}
 // load pinned beaches
 loadPinnedBeaches();
 // load initial beach
-populateBeachData({ name: 'Bondi Beach' });
+populateBeachData({ name: "Bondi Beach" });
 // default or last searched
 
 // test call to console.log noaa fetches
