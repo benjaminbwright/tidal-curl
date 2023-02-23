@@ -17,17 +17,35 @@
   <body>
     <!-- header  -->
     <header>
-      <h1>Tidal Curl</h1>
+      <div >
+        <h1>Tidal Curl</h1>
+      </div>
+     
     </header>
 
     <main>
-      <section id="beach-data">
-        <!-- beach data goes here  -->
-      </section>
+     
       <section id="beach-search">
-        <!-- search form  -->
+        <!-- search form -->
+        <form id="search-form">
+          <input id="search-input" placeholder="search..."></input>
+          <button id="search-button">Find Spots, Man!</button>
+        </form>
+        <!-- past searches -->
+        <div id="past-searches">
+          <h2 id="past-searches-header">Past Searches</h2>
+          <div id="past-search-button-container">
+            <button class="button" data-search="bondi beach">Bondi Beach</button>
+            <button class="button" data-search="villano beach">Villano Beach</button>
+            <button class="button" data-search="port aransas">Port Aransas</button>
+          </div>
+        </div>
         <!-- locale buttons  -->
         <!-- search results  -->
+      </section>
+
+      <section id="beach-data">
+        <!-- beach data goes here  -->
       </section>
     </main>
     <!-- Add additional js libraries here  like jquery or d3 -->
