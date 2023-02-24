@@ -6,5 +6,15 @@
     --wipeout: #CA5049;
     --surferyellow: #D5D00D;
     --surferblack: #292A2E;
+    background-color: var(--ocean);
   }
-  
+
+  body {
+    color: var(--surferblack)
+  }
+
+  #headermain {
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 15px;
+  }
