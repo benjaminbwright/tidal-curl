@@ -23,19 +23,11 @@ function findBeaches(search) {
 function getAllNOAAData(stationId = "1612340") {
   // link to data response descriptions
   // https://api.tidesandcurrents.noaa.gov/api/prod/responseHelp.html
-<<<<<<< HEAD
-  getNOAAData(stationId, "tide", console.log);
-  getNOAAData(stationId, "wind", console.log);
+  getNOAAData(stationId, "tide");
+  getNOAAData(stationId, "wind");
 }
 
-function getNOAAData(stationId = "1612340", type, callback) {
-=======
-  getNOAAData(stationId, 'tide');
-  getNOAAData(stationId, 'wind');
-}
-
-function getNOAAData(stationId = '1612340', type, callback = console.log) {
->>>>>>> ce36dd92f6e653faeb166eb8a711f759f779f9f1
+function getNOAAData(stationId = "1612340", type, callback = console.log) {
   // https://api.tidesandcurrents.noaa.gov/api/prod/#requestResponse
 
   // tide data example
@@ -53,12 +45,7 @@ function getNOAAData(stationId = '1612340', type, callback = console.log) {
     product = "wind";
   }
 
-<<<<<<< HEAD
   var baseURL = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?";
-=======
-  var baseURL = 'https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?';
-
->>>>>>> ce36dd92f6e653faeb166eb8a711f759f779f9f1
   var paramsObject = {
     date: "today",
     station: stationId,
@@ -99,8 +86,8 @@ function getOpenWeatherData(
   // default Haleiwa beach, north shore, oahu, hawai'i
   // 21.596175, -158.104939
 
-  var baseURL = 'https://api.openweathermap.org/data/2.5/weather?';
-  var apiKey = 'ef8910c554273a994bf8073ccd0ffdae';
+  var baseURL = "https://api.openweathermap.org/data/2.5/weather?";
+  var apiKey = "ef8910c554273a994bf8073ccd0ffdae";
 
   fetch(`${baseURL}lat=${lat}&lon=${lon}&appid=${apiKey}`)
     .then(function (response) {
