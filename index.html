@@ -9,58 +9,79 @@
     <!-- <link rel="stylesheet" href="./assets/css/reset.css" /> -->
 
     <!-- Add CSS Framework Link Here  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
     <!-- Load fonts here -->
 
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-
-    <div id="columns block headermain">
-    <!-- header  -->
-    <header class="column is-one-third block">
-      <div class="card headercard" >
-        <h1 id="tidalheader">Tidal Curl</h1>
+    <div id="main-content" class="columns">
+      <div id="headersearch" class="column is-one-third block">
+        <!-- header  -->
+        <header class= block">
+          <div class="card headercard">
+            <h1 id="tidalheader">Tidal Curl</h1>
+          </div>
+        </header>
+  
+        <section id="beach-search" class="column">
+          <!-- search form -->
+          <form id="search-form">
+            <input id="search-input" placeholder="search..." />
+            <button id="search-button">Find Spots, Man!</button>
+          </form>
+          <!-- past searches -->
+          <div id="past-searches">
+            <h2 id="past-searches-header">Past Searches</h2>
+            <div id="past-search-button-container" class="is-flex-direction-row">
+              <button class="button" data-search="bondi beach">
+                Bondi Beach
+              </button>
+              <button class="button" data-search="villano beach">
+                Villano Beach
+              </button>
+              <button class="button" data-search="port aransas">
+                Port Aransas
+              </button>
+            </div>
+          </div>
+          <!-- search results -->
+          <div id="search-results">
+            <h2 id="search-results-header">Search Results</h2>
+            <div
+              id="search-results-button-container"
+              class="is-flex is-flex-direction-column card surfcard"
+            >
+              <button class="button resbtn" data-search="bondi beach">
+                Bondi Beach
+              </button>
+              <button class="button resbtn" data-search="villano beach">
+                Villano Beach
+              </button>
+              <button class="button resbtn" data-search="port aransas">
+                Port Aransas
+              </button>
+              <button class="button resbtn" data-search="villano beach">
+                Villano Beach
+              </button>
+              <button class="button resbtn" data-search="port aransas">
+                Port Aransas
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
-     
-    </header>
-    
-    
-     
-      <section id="beach-search" class="column is-one-third block">
-        <!-- search form -->
-        <form id="search-form">
-          <input id="search-input" placeholder="search..."></input>
-          <button id="search-button">Find Spots, Man!</button>
-        </form>
-        <!-- past searches -->
-        <div id="past-searches">
-          <h2 id="past-searches-header">Past Searches</h2>
-          <div id="past-search-button-container" class="is-flex-direction-row">
-            <button class="button" data-search="bondi beach">Bondi Beach</button>
-            <button class="button" data-search="villano beach">Villano Beach</button>
-            <button class="button" data-search="port aransas">Port Aransas</button>
-          </div>
-        </div>
-        <!-- search results -->
-        <div id="search-results">
-          <h2 id="search-results-header">Search Results</h2>
-          <div id="search-results-button-container" class="is-flex is-flex-direction-column card surfcard">
-            <button class="button resbtn" data-search="bondi beach">Bondi Beach</button>
-            <button class="button resbtn" data-search="villano beach">Villano Beach</button>
-            <button class="button resbtn" data-search="port aransas">Port Aransas</button>
-            <button class="button resbtn" data-search="villano beach">Villano Beach</button>
-            <button class="button resbtn" data-search="port aransas">Port Aransas</button>
-          </div>
-        </div>
-      </section>      
-    
-    </div>
-
-    <section id="beach-data" >
+      <section id="beach-data" class="column">
         <h2>beach data goes here!</h2>
         <!-- beach data goes here  -->
       </section>
+    </div>
+
+
+
     <!-- Add additional js libraries here  like jquery or d3 -->
     <script src="./assets/js/script.js"></script>
   </body>
