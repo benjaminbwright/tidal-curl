@@ -1,3 +1,4 @@
+/* global styles */
 :root {
     /* declare vars */
     --surfaris: #DDDDDF;
@@ -13,6 +14,13 @@
     color: var(--surferblack)
   }
 
+  .headercard {
+    background-color: var(--lightocean);
+  }
+  .surfcard {
+    background-color: var();
+  }
+  /* header styles */
   #headermain {
     margin-left: 45px;
     margin-right: 45px;
@@ -22,3 +30,10 @@
   #tidalheader {
     text-align: center;
   }
+
+  /* main styles */
+   .resbtn {
+    margin-right: 15px;
+    margin-left: 15px;
+   }
+  /* data styles */
