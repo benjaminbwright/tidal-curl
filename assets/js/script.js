@@ -79,21 +79,24 @@ function getNOAAData(stationId, type, callback) {
 function updateTideDataCard(data) {
   var predictions = data.predictions;
   var tideDataCardEl = document.getElementById('tide');
-  // tideDataCardEl.innerHTML = `
-  // <h3>TIDE</h3>
-  // <p>Low: ${dayjs(predictions[0].t).format('h:mm a')}</p>
-  // `;
+  tideDataCardEl.innerHTML = `
+  <h3>TIDE</h3>
+  <p>Low: ${dayjs(predictions[0].t).format('h:mm a')}</p>
+  <p>High: ${dayjs(predictions[1].t).format('h:mm a')}</p>
+  <p>Low: ${dayjs(predictions[2].t).format('h:mm a')}</p>
+  <p>High: ${dayjs(predictions[3].t).format('h:mm a')}</p>
+  `;
 }
 
 function updateWindDataCard(data) {
   var timeblocks = data.data;
   var mostCurrent = timeblocks.at(-1);
   var windDataCardEl = document.getElementById('wind');
-  // windDataCardEl.innerHTML = `
-  // <h3>WIND</h3>
-  // <p>Wind Speed: ${(mostCurrent.s * 1.15078).toFixed(1)} mph</p>
-  // <p>Wind Direction: ${mostCurrent.dr}</p>
-  // `;
+  windDataCardEl.innerHTML = `
+  <h3>WIND</h3>
+  <p>Wind Speed: ${(mostCurrent.s * 1.15078).toFixed(1)} mph</p>
+  <p>Wind Direction: ${mostCurrent.dr}</p>
+  `;
 }
 
 function getOpenWeatherData(lat, lon, callback) {
