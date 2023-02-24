@@ -1,0 +1,44 @@
+/* global styles */
+:root {
+  /* declare vars */
+  --surfaris: #dddddf;
+  --ocean: #5998ad;
+  --lightocean: #95bdd2;
+  --wipeout: #ca5049;
+  --surferyellow: #d5d00d;
+  --surferblack: #292a2e;
+  background-color: var(--ocean);
+}
+
+body {
+  color: var(--surferblack);
+}
+
+.headercard {
+  background-color: var(--lightocean);
+}
+
+.surfcard {
+  background-color: var(--wipeout);
+}
+/* header styles */
+#headersearch {
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-top: 15px;
+}
+
+#tidalheader {
+  text-align: center;
+}
+
+/* main styles */
+.resbtn {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+/* data styles */
+#beachdata {
+    margin-left: 45px;
+    margin-right: 45px;
+}
