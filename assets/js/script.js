@@ -105,10 +105,11 @@ function getOpenWeatherData(lat, lon, callback) {
   // default Haleiwa beach, north shore, oahu, hawai'i
   // 21.596175, -158.104939
 
-  var baseURL = 'https://api.openweathermap.org/data/2.5/weather?';
+  var baseURL =
+    'https://api.openweathermap.org/data/3.0/onecall?exclude=hourly,daily&';
   var apiKey = '266e8073df65e7c7c339828e843f815a';
 
-  fetch(`${baseURL}lat=${lat}&lon=${lon}&appid=${apiKey}`)
+  fetch(`${baseURL}lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`)
     .then(function (response) {
       return response.json();
     })
@@ -117,8 +118,30 @@ function getOpenWeatherData(lat, lon, callback) {
     });
 }
 
-function updateWeatherDataCard(data) {
-  // console.log(data);
+function updateWeatherDataCards(data) {
+  console.log(data);
+
+  // temp card
+  var temp = data.current.temp;
+  var tempDataCardEl = document.getElementById('temp');
+  tempDataCardEl.innerHTML = `
+  <h3>TEMP</h3>
+  <p>${temp}</p>
+  `;
+
+  // uv card
+  var uv = data.current.uvi;
+  var uvDataCardEl = document.getElementById('uvindex');
+  uvDataCardEl.innerHTML = `
+  <h3>UV</h3>
+  <p>${uv}</p>`;
+
+  // spf card
+  var spf = getSPF(uv);
+  var spfDataCardEl = document.getElementById('spf');
+  spfDataCardEl.innerHTML = `
+  <h3>SPF</h3>
+  <p>${spf}</p>`;
 }
 
 function handlePinClick() {}
@@ -143,4 +166,4 @@ var lat = 21.596175;
 var lon = -158.104939;
 var stationId = '1612340';
 getAllNOAAData(stationId);
-getOpenWeatherData(lat, lon, updateWeatherDataCard);
+getOpenWeatherData(lat, lon, updateWeatherDataCards);
