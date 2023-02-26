@@ -32,6 +32,15 @@ body {
   text-align: center;
 }
 
+#search-button {
+    background-color: var(--lightocean);
+}
+
+.past-search-button  {
+    
+    background-color: var(--lightocean);
+}
+
 /* main styles */
 .resbtn {
   margin-right: 15px;
