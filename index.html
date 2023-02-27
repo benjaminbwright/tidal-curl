@@ -2,8 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Document</title>
     <!-- Uncomment this line to use the reset included  -->
     <!-- <link rel="stylesheet" href="./assets/css/reset.css" /> -->
@@ -14,42 +20,76 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
     <!-- Load fonts here -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/css/style.css"
+    />
   </head>
   <body>
-    <div id="main-content" class="columns">
-      <div id="headersearch" class="column is-one-third block">
+    <div
+      id="main-content"
+      class="columns"
+    >
+      <div
+        id="headersearch"
+        class="column is-one-third block"
+      >
         <!-- header  -->
-        <header class= block">
+        <header class="block">
           <div class="card headercard">
             <h1 id="tidalheader">Tidal Curl</h1>
           </div>
         </header>
-  
-        <section id="beach-search" class="column">
+
+        <section
+          id="beach-search"
+          class="column"
+        >
           <!-- search form -->
           <form id="search-form">
-            <input id="search-input" placeholder="search..." />
+            <input
+              id="search-input"
+              placeholder="search..."
+            />
             <button id="search-button">Find Spots, Man!</button>
           </form>
           <!-- past searches -->
           <div id="past-searches">
             <h2 id="past-searches-header">Past Searches</h2>
-            <div id="past-search-button-container" class="is-flex-direction-row">
-              <button class="button" data-search="bondi beach">
+            <div
+              id="past-search-button-container"
+              class="is-flex-direction-row"
+            >
+              <button
+                class="button"
+                data-search="bondi beach"
+              >
                 Bondi Beach
               </button>
-              <button class="button" data-search="villano beach">
+              <button
+                class="button"
+                data-search="villano beach"
+              >
                 Villano Beach
               </button>
-              <button class="button" data-search="port aransas">
+              <button
+                class="button"
+                data-search="port aransas"
+              >
                 Port Aransas
               </button>
             </div>
@@ -61,45 +101,90 @@
               id="search-results-button-container"
               class="is-flex is-flex-direction-column card surfcard"
             >
-              <button class="button resbtn" data-search="bondi beach">
+              <button
+                class="button resbtn"
+                data-search="bondi beach"
+              >
                 Bondi Beach
               </button>
-              <button class="button resbtn" data-search="villano beach">
+              <button
+                class="button resbtn"
+                data-search="villano beach"
+              >
                 Villano Beach
               </button>
-              <button class="button resbtn" data-search="port aransas">
+              <button
+                class="button resbtn"
+                data-search="port aransas"
+              >
                 Port Aransas
               </button>
-              <button class="button resbtn" data-search="villano beach">
+              <button
+                class="button resbtn"
+                data-search="villano beach"
+              >
                 Villano Beach
               </button>
-              <button class="button resbtn" data-search="port aransas">
+              <button
+                class="button resbtn"
+                data-search="port aransas"
+              >
                 Port Aransas
               </button>
             </div>
           </div>
         </section>
       </div>
-      <section id="beach-data" class="column">
+      <section
+        id="beach-data"
+        class="column"
+      >
         <h2 id="beachname">Beach Name</h2>
         <h3 id="surftime">Surf Time</h3>
         <div id="datacontainer">
-          <div class="card surfcard datacard" id="temp">temp</div>
-          <div class="card surfcard datacard" id="uvindex">uv index</div>
-          <div class="card surfcard datacard" id="spf">spf</div>
-          <div class="card surfcard datacard" id="watertemp">h2Otemp</div>
-          <div class="card surfcard datacard" id="tide">tide</div>
-          <div class="card surfcard datacard" id="wind">wind</div>
-          
-
+          <div
+            class="card surfcard datacard"
+            id="temp"
+          >
+            temp
+          </div>
+          <div
+            class="card surfcard datacard"
+            id="uvindex"
+          >
+            uv index
+          </div>
+          <div
+            class="card surfcard datacard"
+            id="spf"
+          >
+            spf
+          </div>
+          <div
+            class="card surfcard datacard"
+            id="watertemp"
+          >
+            h2Otemp
+          </div>
+          <div
+            class="card surfcard datacard"
+            id="tide"
+          >
+            tide
+          </div>
+          <div
+            class="card surfcard datacard"
+            id="wind"
+          >
+            wind
+          </div>
         </div>
         <!-- beach data goes here  -->
       </section>
     </div>
 
-
-
     <!-- Add additional js libraries here  like jquery or d3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.7/dayjs.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
