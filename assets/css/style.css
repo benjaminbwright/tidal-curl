@@ -21,6 +21,7 @@ body {
 .surfcard {
   background-color: var(--wipeout);
 }
+
 /* header styles */
 #tidalheader {
     font-size: 48px;
@@ -33,6 +34,9 @@ body {
     text-align: center;
   }
 
+  h5 {
+    text-align: center;
+  }
 #headersearch {
   margin-left: 45px;
   margin-right: 45px;
@@ -56,6 +60,7 @@ body {
 
 /* main styles */
 .resbtn {
+  font-size: 20px;
   background-color: var(--surferyellow);
   margin-bottom: 5px;
   margin-bottom:5px;
@@ -63,17 +68,27 @@ body {
   margin-left: 15px;
 }
 /* data styles */
+
+#datacontainer {
+background-color: var(--wipeout)
+}
+
 #beach-data {
     margin-left: 30px;
     margin-right: 30px;
 }
 
 .datacard {
-max-width: 500px;
+font-size: 24px;
+background-color: var(--surferyellow);
+height: 150px;
+flex-basis: 40%;
 margin-top: 15px;
+margin-bottom: 15px;
 }
 
 .data-head {
+  font-size: 26px;
     text-align: center;
 }
 
