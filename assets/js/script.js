@@ -79,12 +79,13 @@ function getNOAAData(stationId, type, callback) {
 function updateTideDataCard(data) {
   var predictions = data.predictions;
   var tideDataCardEl = document.getElementById('tide');
+  console.log(predictions)
   tideDataCardEl.innerHTML = `
-  <h3>TIDE</h3>
-  <p>Low: ${dayjs(predictions[0].t).format('h:mm a')}</p>
-  <p>High: ${dayjs(predictions[1].t).format('h:mm a')}</p>
-  <p>Low: ${dayjs(predictions[2].t).format('h:mm a')}</p>
-  <p>High: ${dayjs(predictions[3].t).format('h:mm a')}</p>
+  <h4 class="data-card-head">TIDE</h4>
+  <h5>Low: ${dayjs(predictions[0].t).format('h:mm a')}</h5>
+  <h5>High: ${dayjs(predictions[1].t).format('h:mm a')}</h5>
+  <h5>Low: ${dayjs(predictions[2].t).format('h:mm a')}</h5>
+  <h5>High: ${dayjs(predictions[3].t).format('h:mm a')}</h5>
   `;
 }
 
@@ -93,9 +94,9 @@ function updateWindDataCard(data) {
   var mostCurrent = timeblocks.at(-1);
   var windDataCardEl = document.getElementById('wind');
   windDataCardEl.innerHTML = `
-  <h3>WIND</h3>
-  <p>Wind Speed: ${(mostCurrent.s * 1.15078).toFixed(1)} mph</p>
-  <p>Wind Direction: ${mostCurrent.dr}</p>
+  <h4 class="data-card-head">WIND</h4>
+  <h5>Wind: ${(mostCurrent.s * 1.15078).toFixed(1)} mph</h5>
+  <h5>Wind: ${mostCurrent.dr}</h5>
   `;
 }
 
@@ -125,23 +126,23 @@ function updateWeatherDataCards(data) {
   var temp = data.current.temp;
   var tempDataCardEl = document.getElementById('temp');
   tempDataCardEl.innerHTML = `
-  <h3>TEMP</h3>
-  <p>${temp}</p>
+  <h4 class="data-card-head">TEMP</h4>
+  <h5>${temp}</h5>
   `;
 
   // uv card
   var uv = data.current.uvi;
   var uvDataCardEl = document.getElementById('uvindex');
   uvDataCardEl.innerHTML = `
-  <h3>UV</h3>
-  <p>${uv}</p>`;
+  <h4 class="data-card-head">UV</h4>
+  <h5>${uv}</h5>`;
 
   // spf card
   var spf = getSPF(uv);
   var spfDataCardEl = document.getElementById('spf');
   spfDataCardEl.innerHTML = `
-  <h3>SPF</h3>
-  <p>${spf}</p>`;
+  <h4 class="data-card-head">SPF</h4>
+  <h5>${spf}</h5>`;
 }
 
 function handlePinClick() {}

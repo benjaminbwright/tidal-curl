@@ -29,10 +29,9 @@
       href="https://fonts.gstatic.com"
       crossorigin
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Original+Surfer&family=Roboto&family=Source+Code+Pro&display=swap" rel="stylesheet">
 
     <link
       rel="stylesheet"
@@ -52,6 +51,7 @@
         <header class="block">
           <div class="card headercard">
             <h1 id="tidalheader">Tidal Curl</h1>
+            <h5 id="websurfhead">Thanks for surfin' the web with us, dude!</h5>
           </div>
         </header>
 
@@ -60,38 +60,25 @@
           class="column"
         >
           <!-- search form -->
-          <form id="search-form">
-            <input
-              id="search-input"
-              placeholder="search..."
-            />
+          <form id="search-form" class="is-flex is-flex-direction-column">
+            <input id="search-input" placeholder="search..." />
             <button id="search-button">Find Spots, Man!</button>
           </form>
           <!-- past searches -->
           <div id="past-searches">
             <h2 id="past-searches-header">Past Searches</h2>
-            <div
-              id="past-search-button-container"
-              class="is-flex-direction-row"
-            >
-              <button
-                class="button"
-                data-search="bondi beach"
-              >
+            <div class="is-mobile past-search-button-container row columns">
+              <button class="is-mobile button past-search-button column is-5" data-search="bondi beach">
                 Bondi Beach
               </button>
+            
               <button
-                class="button"
+                class="is-mobile button past-search-button column is-5"
                 data-search="villano beach"
               >
                 Villano Beach
               </button>
-              <button
-                class="button"
-                data-search="port aransas"
-              >
-                Port Aransas
-              </button>
+             
             </div>
           </div>
           <!-- search results -->
@@ -135,49 +122,37 @@
           </div>
         </section>
       </div>
-      <section
-        id="beach-data"
-        class="column"
-      >
-        <h2 id="beachname">Beach Name</h2>
-        <h3 id="surftime">Surf Time</h3>
-        <div id="datacontainer">
-          <div
-            class="card surfcard datacard"
-            id="temp"
-          >
-            temp
+      <section id="beach-data" class="column">
+        <h2 class="data-head" >Beach Name: <span id="beachname"></span></h2>
+        <h3 class="data-head" >Surf Time: <span id="surftime"></span></h3>
+        <div id="datacontainer" class="is-flex is-flex-wrap-wrap is-justify-content-space-around">
+          <div class="card datacard" id="temp">
+            <h4 class="data-card-head">Temperature</h4>
+            <h5 ></h5>
           </div>
-          <div
-            class="card surfcard datacard"
-            id="uvindex"
-          >
-            uv index
+          <div class="card datacard " id="uvindex">
+            <h4 class="data-card-head">UV Index</h4>
+            <h5 ></h5>
           </div>
-          <div
-            class="card surfcard datacard"
-            id="spf"
-          >
-            spf
+          <div class="card datacard " id="spf">
+            <h4 class="data-card-head">SPF</h4>
+            <h5 ></h5>
           </div>
-          <div
-            class="card surfcard datacard"
-            id="watertemp"
-          >
-            h2Otemp
+          <div class="card datacard " id="watertemp">
+            <h4 class="data-card-head">Water Temperature</h4>
+            <h5 ></h5>
+          
           </div>
-          <div
-            class="card surfcard datacard"
-            id="tide"
-          >
-            tide
+          <div class="card datacard " id="tide">
+            <h4 class="data-card-head">Tide</h4>
+            <h5 ></h5>
           </div>
-          <div
-            class="card surfcard datacard"
-            id="wind"
-          >
-            wind
+          <div class="card datacard " id="wind">
+            <h4 class="data-card-head">Wind</h4>
+            <h5 ></h5>
           </div>
+          
+
         </div>
         <!-- beach data goes here  -->
       </section>
