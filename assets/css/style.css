@@ -1,6 +1,8 @@
 /* global styles */
 :root {
   /* declare vars */
+  --wipeoutfont: 'Original Surfer', cursive;
+  --impactfont: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   --surfaris: #dddddf;
   --ocean: #5998ad;
   --lightocean: #95bdd2;
@@ -12,6 +14,7 @@
 
 body {
   color: var(--surferblack);
+  font-family: var(--impactfont);
 }
 
 .headercard {
@@ -24,12 +27,17 @@ body {
 
 /* header styles */
 #tidalheader {
+    font-family: var(--wipeoutfont);
     font-size: 48px;
+    font-weight: bolder;
+    color: var(--wipeout);
     text-align: center;
+    text-shadow: 4px 4px 0px var(--surferblack)
   }
   
   #websurfhead
    {
+    color: var(--surfaris);
     font-size: 22px;
     text-align: center;
   }
@@ -53,6 +61,7 @@ body {
 }
 .past-search-button  {
     font-size: 20px;
+    font-family: var(--impactfont);
     margin-top: 20px;
     margin-bottom: 20px;
     background-color: var(--lightocean);
@@ -61,6 +70,7 @@ body {
 /* main styles */
 .resbtn {
   font-size: 20px;
+  font-family: var(--impactfont);
   background-color: var(--surferyellow);
   margin-bottom: 5px;
   margin-bottom:5px;
